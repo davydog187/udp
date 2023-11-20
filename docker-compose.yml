@@ -1,0 +1,21 @@
+services:
+  receiver:
+    container_name: receiver
+    build: .
+    environment:
+      TYPE: "receiver"
+      HOST: 0.0.0.0
+      PORT: 5002
+    ports:
+      - "5002:5002/udp"
+
+  sender:
+    container_name: sender
+    build: .
+    environment:
+      TYPE: "sender"
+      NAME: "sender"
+      SOURCE_HOST: 0.0.0.0
+      SOURCE_PORT: 5001
+      DESTINATION_HOST: receiver
+      DESTINATION_PORT: 5002
