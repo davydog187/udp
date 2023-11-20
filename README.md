@@ -9,3 +9,7 @@ To run, simply do:
 ``` shell
 $ docker compose up
 ```
+
+## Related reading
+
+- https://github.com/erlang/otp/issues/5092
