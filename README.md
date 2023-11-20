@@ -6,9 +6,16 @@ This project contains an Elixir program than runs in two modes, sender and recei
 
 To run, simply do:
 
+## Run example of two containers talking over UDP
+
 ``` shell
 $ docker compose up
 ```
+
+## Run example of container sending data to host service over UDP
+
+1. Start the receiver `TYPE=receiver mix run`
+2. Start the sender `docker compose -f docker-compose.host.yml up` 
 
 ## Related reading
 

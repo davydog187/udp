@@ -1,0 +1,16 @@
+# Example where the receiver is located on the host
+#
+# 1. Start the receiver `TYPE=receiver mix run --no-halt`
+# 2. Start compose `docker compose -f docker-compose.host.yml up`
+services:
+
+  sender:
+    container_name: sender
+    build: .
+    environment:
+      TYPE: "sender"
+      NAME: "sender"
+      SOURCE_HOST: 0.0.0.0
+      SOURCE_PORT: 5001
+      DESTINATION_HOST: host.docker.internal
+      DESTINATION_PORT: 5002
