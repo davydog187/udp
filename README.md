@@ -1,21 +1,11 @@
-# Udp
+# UDP
 
-**TODO: Add description**
+A small project that I used to build an understanding of how to send UDP packets between two Docker containers.
 
-## Installation
+This project contains an Elixir program than runs in two modes, sender and receiver. The sender sends a message ever 3 seconds to the destination address, and the receiver listens and prints the message.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `udp` to your list of dependencies in `mix.exs`:
+To run, simply do:
 
-```elixir
-def deps do
-  [
-    {:udp, "~> 0.1.0"}
-  ]
-end
+``` shell
+$ docker compose up
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/udp>.
-
